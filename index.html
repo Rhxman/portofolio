@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Rahman Maulana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; color: #f8fafc; scroll-behavior: smooth; }
+        
+        /* Navbar Glassmorphism */
+        #navbar { transition: all 0.4s ease-in-out; }
+        .nav-scrolled {
+            background: rgba(15, 23, 42, 0.9) !important;
+            backdrop-filter: blur(20px) !important;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            margin-top: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            border-radius: 0 !important;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        /* Background Hero */
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), #0f172a), 
+                        url('gambar/WhatsApp Image 2026-02-06 at 04.24.04.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Profile Glow Animation */
+        .profile-border {
+            position: relative;
+            padding: 5px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #3b82f6, #22c55e, #a855f7);
+            background-size: 400% 400%;
+            animation: gradient-animation 5s ease infinite;
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Project Card Hover */
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav id="navbar" class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass mt-4 mx-auto max-w-5xl rounded-full left-0 right-0">
+        <span class="text-xl font-extrabold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent tracking-tighter">RAHMAN.M</span>
+        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+            <a href="#home" class="hover:text-blue-400 transition">Home</a>
+            <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+        </div>
+        <button class="text-xs bg-white text-slate-900 px-5 py-2 rounded-full font-bold hover:bg-blue-500 hover:text-white transition shadow-lg">HIRE ME</button>
+    </nav>
+
+    <section id="home" class="hero-bg min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 relative">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 z-10" data-aos="zoom-in">
+            Halo, Saya <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent">Rahman Maulana</span>
+        </h1>
+        <p class="text-slate-300 mb-10 max-w-lg z-10 text-lg leading-relaxed" data-aos="fade-up">Fullstack Developer & Data Analyst. Mengubah baris kode menjadi solusi digital yang bermakna.</p>
+
+        <div class="relative mb-12 z-10" data-aos="fade-up" data-aos-delay="200">
+            <div class="profile-border">
+                <img src="gambar/WhatsApp Image 2026-02-06 at 04.10.49.jpeg" alt="Foto Profil" 
+                     class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-[#0f172a]">
+            </div>
+            <div class="absolute bottom-4 right-4 bg-emerald-500 w-6 h-6 rounded-full border-4 border-[#0f172a] animate-pulse"></div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 z-10" data-aos="fade-up" data-aos-delay="400">
+            <a href="#projects" class="bg-blue-600 px-8 py-3 rounded-full font-bold hover:bg-blue-500 transition shadow-xl shadow-blue-500/20">Proyek Saya</a>
+            
+            <a href="https://instagram.com/USERNAME_KAMU" target="_blank" class="glass px-6 py-3 rounded-full font-bold hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 flex items-center">
+                <i class="fab fa-instagram mr-2 text-xl"></i> Instagram
+            </a>
+
+            <a href="https://wa.me/6285321786124" target="_blank" class="glass px-6 py-3 rounded-full font-bold hover:bg-emerald-500 transition-all duration-300 flex items-center">
+                <i class="fab fa-whatsapp mr-2 text-xl text-emerald-400 group-hover:text-white"></i> WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl font-bold mb-4">Portfolio Karya</h2>
+            <div class="h-1.5 w-24 bg-blue-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="glass p-8 rounded-[2rem] project-card border-transparent hover:border-blue-500/50" data-aos="fade-up">
+                <div class="w-14 h-14 bg-blue-500/20 text-blue-400 flex items-center justify-center rounded-2xl mb-6 text-2xl">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Sistem Info Proyek</h3>
+                <p class="text-slate-400 text-sm mb-8 leading-relaxed">Manajemen tim dan monitoring tugas secara real-time berbasis PHP & MySQL.</p>
+                <div class="flex flex-col gap-3">
+                    <span class="w-max text-[10px] bg-blue-500/10 text-blue-400 px-3 py-1 rounded-md font-bold uppercase tracking-wider">Web Architecture</span>
+                    <a href="project/db_manajemen_proyek/index.php" class="text-center bg-blue-600 text-white text-xs font-bold py-3 rounded-xl hover:bg-blue-500 transition shadow-lg shadow-blue-600/20">Buka Demo</a>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-[2rem] project-card border-transparent hover:border-emerald-500/50" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 flex items-center justify-center rounded-2xl mb-6 text-2xl">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">dbtiket</h3>
+                <p class="text-slate-400 text-sm mb-8 leading-relaxed">Optimalisasi pengolahan data tiket penumpang dengan efisiensi database tinggi.</p>
+                <div class="flex flex-col gap-3">
+                    <span class="w-max text-[10px] bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-md font-bold uppercase tracking-wider">Database System</span>
+                    <a href="project/dbtiket/index.php" class="text-center bg-emerald-600 text-white text-xs font-bold py-3 rounded-xl hover:bg-emerald-500 transition shadow-lg shadow-emerald-600/20">Buka Demo</a>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-[2rem] project-card border-transparent hover:border-purple-500/50" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 bg-purple-500/20 text-purple-400 flex items-center justify-center rounded-2xl mb-6 text-2xl">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Play Store Analytics</h3>
+                <p class="text-slate-400 text-sm mb-8 leading-relaxed">Deep learning analysis untuk memprediksi kualitas aplikasi di Google Play Store.</p>
+                <div class="flex flex-col gap-3">
+                    <span class="w-max text-[10px] bg-purple-500/10 text-purple-400 px-3 py-1 rounded-md font-bold uppercase tracking-wider">Data Science</span>
+                    <a href="#" class="text-center border border-purple-500 text-purple-400 text-xs font-bold py-3 rounded-xl hover:bg-purple-500 hover:text-white transition">Lihat Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-20 text-center border-t border-white/5">
+        <div class="flex justify-center space-x-8 mb-10 text-2xl">
+            <a href="#" class="text-slate-400 hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-slate-400 hover:text-blue-400 transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/USERNAME_KAMU" class="text-slate-400 hover:text-pink-500 transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="text-slate-500 text-sm">© 2026 <span class="text-white font-bold">Rahman Maulana</span>. Crafted with Passion.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        window.onscroll = function() {
+            const navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add("nav-scrolled");
+            } else {
+                navbar.classList.remove("nav-scrolled");
+            }
+        };
+    </script>
+</body>
+</html>
